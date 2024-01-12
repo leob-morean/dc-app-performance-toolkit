@@ -11,7 +11,7 @@ from util.conf import JIRA_SETTINGS
 def app_specific_action(webdriver, datasets):
 
     page = BasePage(webdriver)
-    issue_key = 'JIRCERT-22'
+    issue_key = 'AW-2'
     if datasets['custom_issues']:
         issue_key = datasets['custom_issue_key']
 
@@ -21,7 +21,7 @@ def app_specific_action(webdriver, datasets):
     #
     @print_timing("selenium_app_specific_user_login")
     def measure():
-        def app_specific_user_login(username='admin', password='admin', project_key='JIRCERT'):
+        def app_specific_user_login(username='admin', password='admin', project_key='AW'):
             login_page = Login(webdriver)
             login_page.delete_all_cookies()
             login_page.go_to()
